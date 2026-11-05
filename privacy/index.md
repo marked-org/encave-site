@@ -143,7 +143,7 @@ Plain HTTP is used only for a server on your local network, including a name
 on your home network (such as a `.local` name): Encave then connects only to a
 local address of that name, never to an address outside your network, and
 refuses a name that has none. Such a connection never goes through a proxy set
-up on the device. Everything else uses HTTPS. Links (the source code, this
+up on the device. Everything else uses HTTPS. Links (the website, this
 policy, a search result) open in your browser.
 
 ### What the stores may provide
@@ -337,7 +337,7 @@ compris un nom de votre réseau domestique (comme un nom en `.local`) : Encave
 se connecte alors qu'à une adresse locale de ce nom, jamais à une adresse hors
 de votre réseau, et refuse un nom qui n'en a aucune. Une telle connexion ne
 passe jamais par un proxy configuré sur l'appareil. Tout le reste passe en
-HTTPS. Les liens (le code source, cette politique, un
+HTTPS. Les liens (le site, cette politique, un
 résultat de recherche) s'ouvrent dans votre navigateur.
 
 ### Ce que les stores peuvent fournir
