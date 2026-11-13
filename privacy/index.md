@@ -8,7 +8,7 @@ with any change to what the apps send. -->
 
 ## English
 
-Effective date: November 13, 2026
+Effective date: November 14, 2026
 
 Encave is a wine cellar app for iPhone, iPad, Mac and Android. This policy
 covers those apps. In short: **the developer of Encave collects nothing about you or your cellar.**
@@ -16,7 +16,7 @@ There is no account, no analytics, no advertising, no tracking and no
 third-party SDK (except Google ML Kit on Android if you turn it on, and Google
 Play Integrity on Android for Encave AI's free bottles, below). The one server
 the developer runs is Encave AI's, used only if you use Encave AI: it receives
-information about a wine, never your cellar, and keeps no request content.
+information about a wine, never your cellar, and keeps nothing personal.
 
 ### What stays on your device
 
@@ -251,10 +251,19 @@ are asked first and Encave AI only when they cannot answer.
 - **What the server keeps**: per wallet, the balance, the credits given or
   used, the bottles opened (a random number for each, valid 30 days), costs and
   counters for limits, and, for about ten minutes, the random number of each
-  signed request (so it cannot be replayed). It keeps **no request content**
+  signed request (so it cannot be replayed). Outside the beta (below), it keeps **no request content**
   (no photo, no wine, no answer) and **writes no IP address**: addresses are
   only held in memory for a short time to limit abuse. A wallet never used is
   deleted after 30 days. The server's data is backed up daily on the server.
+- **Troubleshooting, anonymous**: for each request, the server notes its kind
+  (label, details…), the AI model and provider, whether it worked or the error,
+  how long it took and its size in tokens. Never the wallet, an address or the
+  content. These notes are deleted after 7 days (30 days while Encave is in beta).
+- **During the beta (TestFlight only)**: to reproduce problems and choose the best
+  AI models, the server also keeps the requests of TestFlight installs and the AI's
+  answers: the label photos (with their metadata, such as location, removed), the
+  wine's details as sent, and the answer. They are not tied to your wallet and are
+  deleted after 30 days. App Store installs are never kept.
 - **The free bottles, once per device**: to give them only once, the app asks
   the system to vouch for it, only when your wallet is made:
   - **Apple**: Apple's DeviceCheck (Apple keeps two bits per device for Encave;
@@ -302,7 +311,7 @@ Changes to this policy are published here, with the date above. Questions: open 
 
 ## Français
 
-Date d'effet : 13 novembre 2026
+Date d'effet : 14 novembre 2026
 
 Encave est une app de cave à vin pour iPhone, iPad, Mac et Android. Cette
 politique couvre ces apps. En bref : **le développeur d'Encave ne collecte rien sur vous ni sur
@@ -311,7 +320,7 @@ pistage ni de SDK tiers (sauf Google ML Kit sur Android si vous l'activez, et
 Google Play Integrity sur Android pour les bouteilles offertes d'Encave IA,
 ci-dessous). Le seul serveur exploité par le développeur est celui d'Encave IA,
 utilisé seulement si vous utilisez Encave IA : il reçoit des informations sur un
-vin, jamais votre cave, et ne garde le contenu d'aucune requête.
+vin, jamais votre cave, et ne garde rien de personnel.
 
 ### Ce qui reste sur votre appareil
 
@@ -581,11 +590,22 @@ Encave IA seulement quand elles ne peuvent pas répondre.
   donnés ou utilisés, les bouteilles ouvertes (un numéro au hasard pour
   chacune, valable 30 jours), des coûts et des compteurs pour les limites et,
   pendant une dizaine de minutes, le numéro au hasard de chaque requête signée
-  (pour qu'elle ne puisse pas être rejouée). Il ne garde **aucun contenu de
+  (pour qu'elle ne puisse pas être rejouée). Hors bêta (ci-dessous), il ne garde **aucun contenu de
   requête** (ni photo, ni vin, ni réponse) et **n'écrit aucune adresse IP** :
   les adresses ne sont gardées qu'en mémoire, peu de temps, pour limiter les
   abus. Un portefeuille jamais utilisé est effacé après 30 jours. Les données
   du serveur sont sauvegardées chaque jour sur le serveur.
+- **Dépannage, anonyme** : pour chaque requête, le serveur note son type
+  (étiquette, détails…), le modèle et le fournisseur d'IA, si elle a réussi ou
+  l'erreur, sa durée et sa taille en tokens. Jamais le portefeuille, une adresse
+  ni le contenu. Ces notes sont effacées après 7 jours (30 jours tant qu'Encave
+  est en bêta).
+- **Pendant la bêta (TestFlight seulement)** : pour reproduire les problèmes et
+  choisir les meilleurs modèles d'IA, le serveur garde aussi les requêtes des
+  installations TestFlight et les réponses de l'IA : les photos d'étiquette (sans
+  leurs métadonnées, comme le lieu), les détails du vin envoyés et la réponse.
+  Elles ne sont pas liées à votre portefeuille et sont effacées après 30 jours.
+  Les installations depuis l'App Store ne sont jamais gardées.
 - **Les bouteilles offertes, une fois par appareil** : pour ne les offrir
   qu'une fois, l'app demande au système de se porter garant, seulement quand
   votre portefeuille est créé :
