@@ -8,13 +8,14 @@ with any change to what the apps send. -->
 
 ## English
 
-Effective date: November 14, 2026
+Effective date: November 18, 2026
 
 Encave is a wine cellar app for iPhone, iPad, Mac and Android. This policy
 covers those apps. In short: **the developer of Encave collects nothing about you or your cellar.**
 There is no account, no analytics, no advertising, no tracking and no
-third-party SDK (except Google ML Kit on Android if you turn it on, and Google
-Play Integrity on Android for Encave AI's free bottles, below). The one server
+third-party SDK (except Google ML Kit on Android if you turn it on, Google
+Play Integrity on Android for Encave AI's free credits, and the stores' own
+purchase systems for Encave Lifetime, below). The one server
 the developer runs is Encave AI's, used only if you use Encave AI: it receives
 information about a wine, never your cellar, and keeps nothing personal.
 
@@ -151,8 +152,9 @@ not encrypted either: it goes where you choose to save or share it.
    with your own keys (or a server of your own), Encave sends them
    **information about a wine**, directly from your device, whenever it helps
    fill in or check that wine: the label photo when you scan a label or ask to
-   complete a wine; the photos of a restaurant's wine list when you scan one
-   (Wine List: the AI lists the wines printed, with their prices, and the wine
+   complete a wine; the photos of a restaurant's wine list when you ask your AI
+   to read one (Wine List is read on your device first, sending nothing; Read with
+   AI sends the photos: the AI lists the wines printed, with their prices, and the wine
    you pick, the restaurant and the price stay on your device, like any wine
    tasted elsewhere); and the wine's details (such as its name as you typed it,
    producer, appellation, region, country, classification, vintage, colour,
@@ -262,21 +264,36 @@ are asked first and Encave AI only when they cannot answer.
 - **During the beta (TestFlight only)**: to reproduce problems and choose the best
   AI models, the server also keeps the requests of TestFlight installs and the AI's
   answers: the label photos (with their metadata, such as location, removed), the
-  wine's details as sent, and the answer. They are not tied to your wallet and are
+  wine's details as sent, and the answer. When a TestFlight install with an Encave AI
+  wallet reads a wine list on the device, it also sends the list's photos (without
+  their metadata), the text the device recognised and the wines it read, kept the
+  same way to improve the reading. They are not tied to your wallet and are
   deleted after 30 days. App Store installs are never kept.
-- **The free bottles, once per device**: to give them only once, the app asks
+- **The free credits, once per device**: to give them only once, the app asks
   the system to vouch for it, only when your wallet is made:
   - **Apple**: Apple's DeviceCheck (Apple keeps two bits per device for Encave;
-    the server sets one to say "free bottles given") and the App Store's signed
+    the server sets one to say "free credits given") and the App Store's signed
     proof that the app was installed from the App Store or TestFlight.
   - **Android**: Google Play Integrity. Google Play checks that the app and the
     phone are genuine and gives a signed verdict, which the server has Google
     decode and then forgets. To do this, Google collects information about the
     phone and the app under its own policy (see
     [Play Integrity's data disclosure](https://developer.android.com/google/play/integrity/overview)).
-    If it fails, you get no free bottles; nothing else changes.
+    If it fails, you get no free credits; nothing else changes.
 
   Neither check involves your cellar.
+
+### Encave Lifetime and the free trial
+
+Encave can be tried for free for 14 days; Encave Lifetime is then bought once,
+in the app, with no subscription. The trial and the purchase go through the
+App Store (Apple's in-app purchase) or Google Play (Google Play Billing), under
+their policies: Apple or Google take the payment and tell the app what your
+store account owns. The app reads this on the device. It is never sent to the
+developer or to Encave AI's server, and never synced: each device asks its own
+store. On Android, the date the trial started is kept on the device only. From
+Apple and Google, the developer receives only sales reports (how many, how
+much, by country), never who bought.
 
 ### What the stores may provide
 
@@ -306,20 +323,20 @@ own policies apply.
 
 ### Changes and contact
 
-Changes to this policy are published here, with the date above. Questions: open an issue on
-<https://github.com/marked-org/encave-site/issues>.
+Changes to this policy are published here, with the date above. Questions: write to
+<encave@clearboxhq.com>.
 
 ## Français
 
-Date d'effet : 14 novembre 2026
+Date d'effet : 18 novembre 2026
 
 Encave est une app de cave à vin pour iPhone, iPad, Mac et Android. Cette
 politique couvre ces apps. En bref : **le développeur d'Encave ne collecte rien sur vous ni sur
 votre cave.** Pas de compte, pas de mesure d'audience, pas de publicité, pas de
 pistage ni de SDK tiers (sauf Google ML Kit sur Android si vous l'activez, et
-Google Play Integrity sur Android pour les bouteilles offertes d'Encave IA,
-ci-dessous). Le seul serveur exploité par le développeur est celui d'Encave IA,
-utilisé seulement si vous utilisez Encave IA : il reçoit des informations sur un
+Google Play Integrity sur Android pour les crédits offerts d'Encave AI, et le
+système d'achat des stores pour Encave à vie, ci-dessous). Le seul serveur exploité par le développeur est celui d'Encave AI,
+utilisé seulement si vous utilisez Encave AI : il reçoit des informations sur un
 vin, jamais votre cave, et ne garde rien de personnel.
 
 ### Ce qui reste sur votre appareil
@@ -474,7 +491,9 @@ choisissez de l'enregistrer ou de le partager.
    depuis votre appareil, chaque fois que cela aide à renseigner ou à
    vérifier ce vin : la photo de l’étiquette quand vous scannez une étiquette
    ou demandez de compléter un vin ; les photos de la carte des vins d’un
-   restaurant quand vous en scannez une (Carte des vins : l’IA liste les vins
+   restaurant quand vous demandez à votre IA de la lire (la Carte des vins est
+   d’abord lue sur votre appareil, sans rien envoyer ; Lire avec l’IA envoie les
+   photos : l’IA liste les vins
    imprimés, avec leurs prix, et le vin que vous choisissez, le restaurant et
    le prix restent sur votre appareil, comme tout vin goûté ailleurs) ; et les
    détails du vin (comme son nom tel
@@ -564,13 +583,13 @@ passe jamais par un proxy configuré sur l'appareil. Tout le reste passe en
 HTTPS. Les liens (le site, cette politique, un
 résultat de recherche) s'ouvrent dans votre navigateur.
 
-### Encave IA, le serveur du développeur
+### Encave AI, le serveur du développeur
 
-Encave IA est l'IA qui fonctionne sans clés à vous, payée avec des crédits.
+Encave AI est l'IA qui fonctionne sans clés à vous, payée avec des crédits.
 Elle n'est utilisée que si son interrupteur est activé dans **Réglages › IA**
 (tant que vous n'y avez pas touché, seulement quand aucune IA à vous ne peut
 répondre). Si vos propres clés sont activées, elles sont demandées d'abord, et
-Encave IA seulement quand elles ne peuvent pas répondre.
+Encave AI seulement quand elles ne peuvent pas répondre.
 
 - **Ce qui est envoyé** : les mêmes informations sur un vin que pour votre
   propre IA (ci-dessus) : la photo de l'étiquette, les photos d'une carte des
@@ -604,13 +623,17 @@ Encave IA seulement quand elles ne peuvent pas répondre.
   choisir les meilleurs modèles d'IA, le serveur garde aussi les requêtes des
   installations TestFlight et les réponses de l'IA : les photos d'étiquette (sans
   leurs métadonnées, comme le lieu), les détails du vin envoyés et la réponse.
+  Quand une installation TestFlight avec un portefeuille Encave AI lit une carte
+  des vins sur l'appareil, elle envoie aussi les photos de la carte (sans leurs
+  métadonnées), le texte reconnu par l'appareil et les vins lus, gardés de la même
+  façon pour améliorer la lecture.
   Elles ne sont pas liées à votre portefeuille et sont effacées après 30 jours.
   Les installations depuis l'App Store ne sont jamais gardées.
-- **Les bouteilles offertes, une fois par appareil** : pour ne les offrir
+- **Les crédits offerts, une fois par appareil** : pour ne les offrir
   qu'une fois, l'app demande au système de se porter garant, seulement quand
   votre portefeuille est créé :
   - **Apple** : DeviceCheck d'Apple (Apple garde deux bits par appareil pour
-    Encave ; le serveur en met un pour dire « bouteilles offertes ») et la
+    Encave ; le serveur en met un pour dire « crédits offerts ») et la
     preuve signée par l'App Store que l'app a été installée depuis l'App Store
     ou TestFlight.
   - **Android** : Google Play Integrity. Google Play vérifie que l'app et le
@@ -618,10 +641,23 @@ Encave IA seulement quand elles ne peuvent pas répondre.
     décoder par Google puis oublie. Pour cela, Google collecte des informations
     sur le téléphone et l'app, selon sa propre politique (voir
     [la page de Play Integrity sur les données](https://developer.android.com/google/play/integrity/overview)).
-    En cas d'échec, vous n'avez pas de bouteilles offertes ; rien d'autre ne
+    En cas d'échec, vous n'avez pas de crédits offerts ; rien d'autre ne
     change.
 
   Aucune de ces vérifications ne concerne votre cave.
+
+### Encave à vie et l'essai gratuit
+
+Encave s'essaie gratuitement pendant 14 jours ; Encave à vie s'achète ensuite
+une seule fois, dans l'app, sans abonnement. L'essai et l'achat passent par
+l'App Store (l'achat intégré d'Apple) ou Google Play (Google Play Billing),
+selon leurs politiques : Apple ou Google encaissent le paiement et disent à
+l'app ce que votre compte du store possède. L'app le lit sur l'appareil. Ce
+n'est jamais envoyé au développeur ni au serveur d'Encave AI, ni synchronisé :
+chaque appareil interroge son propre store. Sur Android, la date de début de
+l'essai reste sur l'appareil. D'Apple et de Google, le développeur ne reçoit
+que des rapports de ventes (combien, quel montant, par pays), jamais qui a
+acheté.
 
 ### Ce que les stores peuvent fournir
 
@@ -655,5 +691,5 @@ de recherche que vous choisissez, leurs propres politiques s'appliquent.
 ### Modifications et contact
 
 Les modifications de cette politique sont publiées ici, avec la date
-ci-dessus. Questions : ouvrez un ticket sur
-<https://github.com/marked-org/encave-site/issues>.
+ci-dessus. Questions : écrivez à
+<encave@clearboxhq.com>.

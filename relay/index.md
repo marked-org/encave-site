@@ -22,4 +22,4 @@ It never sees cellar contents, device names, photos or keys.
 ## How long files are kept
 
 Mailboxes not written to for a year are deleted, so a relay is a mailbox, not a
-backup. Keep backups with **Back Up Now** in **Settings › Your data**.
+backup. Keep backups with **Back Up Now** in **Settings › Data**.
